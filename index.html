@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Facebook login</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body>
+  <h1>Search your facebook friends instantly!</h1>
+  <div id="venmoMe">
+    <div id="buttonHolder">
+      <button type='button' id="splitButton" class="btn btn-primary">Split</button>
+    </div>
+    <div id="formHolder">
+      <form id="splitMoney" action="#">
+        <label for="firstName">Name: </label><input id="firstName"/><br/>
+        <label for="totalAmount">Amount: $</label><input type="number" value="0.00" id="totalAmount"/>
+      </form>
+    </div>
+    <div id="addName"></div>
+    <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+  </div>
+  <script id="personSplitTemplate" type="text/template">
+  <div class="personSplit">
+    <h2> <%= name %>
+    <span> Amount owed: <%= amountOwed %> </span>
+  </div>
+  </script>
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script src="js/json2.js"></script>
+  <script src="js/underscore-min.js"></script>
+  <script src="js/backbone-min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+
+
